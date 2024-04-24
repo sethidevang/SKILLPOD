@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skillplot | Sign Up</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="skillpod-favicon-color.png">
+    <link rel="stylesheet" href="tryloginstyle.css">
+    <style>
+        @media (max-width: 768px) {
+
+.container {
+    width: 80%;
+}
+
+.form-container {
+    flex-direction: column;
+}
+
+.form-container form {
+    width: 100%;
+}
+}
+.toggle-container {
+display: flex;
+justify-content: space-between;
+margin-bottom: 20px;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="toggle-container">
+            <!-- <button class="toggle" id="login-toggle">Login</button> -->
+            <!-- <button class="toggle active" id="signup-toggle">Sign Up</button> -->
+            <!-- <li><a class="cta" href="trylogin.html">Login</a></li> -->
+        </div>
+
+        <div class="form-container">
+            <form id="login-form" class="inactive">
+                </form>
+
+            <form id="signup-form" class="active">
+                <h1>Sign Up</h1>
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="profession">Profession</label>
+                    <input type="text" id="profession" name="profession" required>
+                </div>
+                <div class="form-group">
+                    <label for="experience">Years of Experience</label>
+                    <input type="number" id="experience" name="experience" required>
+                </div>
+                <div class="form-group">
+                    <label for="skills">Skills (comma separated)</label>
+                    <input type="text" id="skills" name="skills" required>
+                </div>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+  $("#signup-form").submit(function(event) {
+    event.preventDefault(); 
+
+    var name = $("#name").val();
+    var email = $("#email").val();
+    var password = $("#signup-password").val(); 
+    var profession = $("#profession").val();
+    var experience = $("#experience").val();
+    var skills = $("#skills").val();
+
+    var userDetails = {
+      name: name,
+      email: email,
+      password: password, 
+      profession: profession,
+      experience: experience,
+      skills: skills
+    };
+
+    localStorage.se1tItem("userData", JSON.stringify(userDetails));
+
+    
+    $("#signup-form")[0].reset();
+
+    alert("Sign Up successful!"); 
+  });
+});
+
+    </script>
+</body>
+</html>

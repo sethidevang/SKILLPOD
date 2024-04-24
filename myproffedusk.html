@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skillplot | My Profile</title>
+    <!-- <link rel="stylesheet" href="myproff2.css"> -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="endstyle.css">
+    <link rel="icon" type="image/x-icon" href="skillpod-favicon-color.png">
+
+    <link rel="stylesheet" href="endstyle.css">
+</head>
+<body>
+    <header>
+      <i class="fas fa-bars" id="toggle-icon"></i>
+        <a class="logo" href="about.html"><img src="logos.png" alt="logo"></a>
+        <nav>
+            <ul class="nav__links">
+                <li><a href="searchbar1.html">Jobs</a></li>
+                <li><a href="trycomm.html">Community</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="help.html">Help</a></li>
+                <li class="userimg"><a href="myproff2.html">
+                  <img src="people-avatar-icon-png.webp" alt="profile picture" class="profile-image">
+              </a></li>
+                <!-- <li><a class="cta" href="trysignup.html">SignUp</a></li>
+                <li><a class="cta" href="trylogin.html">Login</a></li> -->
+            </ul>
+        <!-- </nav> -->
+        
+        </nav>
+    </header>
+    <nav class="mobile-nav hidden">
+      <ul class="nav__linksM">
+        <li><a href="searchbar1.html">Jobs</a></li>
+        <li><a href="trycomm.html">Community</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="help.html">Help</a></li>
+        <li class="userimg"><a href="myproff2.html">
+          <img src="people-avatar-icon-png.webp" alt="profile picture" class="profile-image">
+          
+      </ul>
+  </nav>
+  <main>
+    <div class="profile-container">
+        <section class="profile-banner">
+            <img src="profile10.jpg" alt="Profile Banner">
+            <div class="profile-info">
+                <img src="people-avatar-icon-png.webp" alt="Profile Picture">
+                <h1>[Your Name]</h1>
+                <p>[Your Job Title] at [Company Name]</p>
+            </div>
+        </section>
+
+        <section class="profile-content">
+            <nav class="profile-nav">
+                <ul>
+                    <li class="active"><a href="myproff2.html">Summary & Experience</a></li>
+                    <!-- <li><a href="#">Experience</a></li> -->
+                    <li><a href="myproffedusk.html">Education & Skills</a></li>
+                    <!-- <li><a href="#">Skills</a></li> -->
+                    <li><a href="myproffrc.html">Recommendations & Connections</a></li>
+                    <!-- <li><a href="#">Connections</a></li> -->
+                </ul>
+            </nav>
+
+            <div class="profile-section active">
+                <h2>Education</h2>
+                <p>[Write a brief overview of yourself, your career, and your goals.]</p>
+            </div>
+
+            <div class="profile-section">
+                <h2>Experience</h2>
+                <ul>
+                    <li>
+                        <h3>[Company Name]</h3>
+                        <p>[Job Title] | [Dates of employment]</p>
+                        <p>[List of responsibilities and achievements]</p>
+                    </li>
+                    </ul>
+            </div>
+
+            </section>
+    </div>
+</main>
+    <hr>
+    <div class="endata">
+        <span>
+        <a class="logo" href="/"><img src="skillpod-favicon-color.png" alt="logo"></a>
+        <!-- <div class="dataind">
+
+        </div> -->
+    </span>
+        <span
+         class="desc">
+         <br>
+            Your Gateway to Career Success! SkillPod is a dynamic job board platform designed to connect talented individuals with exciting employment opportunities tailored to their skills and aspirations. Whether you're a seasoned professional or just starting your career journey, SkillPod empowers you to explore a vast array of job listings across various industries and geographic locations. With user-friendly features and intuitive search functionalities, finding the perfect job has never been easier. Join SkillPod today and unlock your potential for professional growth and fulfillment!"
+    </span>
+    </div>
+    <div class="share-btn-container">
+        <a href="#" target="_blank" class="facebook-btn">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="#" target="_blank" class="twitter-btn">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <!-- <a href="#" target="_blank" class="pinterest-btn">
+          <i class="fab fa-pinterest"></i>
+        </a> -->
+        <a href="#" target="_blank" class="linkedin-btn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="#" target="_blank" class="whatsapp-btn">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="#" target="_blank" class="instagram-btn">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" target="_blank" class="snapchat-btn">
+          <i class="fab fa-snapchat"></i>
+        </a>
+      </div>
+    <script>
+        const pinterestImg = document.querySelector(".pinterest-img");
+        const facebookBtn = document.querySelector(".facebook-btn");
+        const twitterBtn = document.querySelector(".twitter-btn");
+        const pinterestBtn = document.querySelector(".pinterest-btn");
+        const linkedinBtn = document.querySelector(".linkedin-btn");
+        const whatsappBtn = document.querySelector(".whatsapp-btn");
+        const instagramBtn = document.querySelector(".instagram-btn");
+        const snapchatBtn = document.querySelector(".snapchat-btn");
+        function init() {
+          let postUrl = encodeURI(document.location.href);
+          let postTitle = encodeURI("Hi everyone, please check this out: ");
+        //   let postImg = encodeURI(pinterestImg.src);
+          facebookBtn.setAttribute(
+            "href",
+            `https://www.facebook.com/sharer.php?u=${postUrl}`
+          );
+          twitterBtn.setAttribute(
+            "href",
+            `https://twitter.com/share?url=${postUrl}&text=${postTitle}`
+          );
+          // pinterestBtn.setAttribute(
+          //   "href",
+          //   `https://pinterest.com/pin/create/bookmarklet/?media=${postImg}&url=${postUrl}&description=${postTitle}`
+          // );
+          linkedinBtn.setAttribute(
+            "href",
+            `https://www.linkedin.com/shareArticle?url=${postUrl}&title=${postTitle}`
+          );
+          whatsappBtn.setAttribute(
+            "href",
+            `https://wa.me/?text=${postTitle} ${postUrl}`
+          );
+          instagramBtn.setAttribute(
+            "href",
+            `https://www.instagram.com/?utm_source=ig_web_copy_link`
+          );
+          snapchatBtn.setAttribute(
+            "href",
+            `https://www.snapchat.com/add/USERNAME`
+          );
+        }
+        init();
+      </script>
+      <center><a class="devang" href="#">Designed By<br>Devang Sethi</a></center> 
+      <script>
+        const toggleIcon = document.getElementById("toggle-icon");
+        const navLinks = document.querySelector(".nav__links");
+        const mobileNav = document.querySelector(".mobile-nav");
+
+        toggleIcon.addEventListener("click", () => {
+            navLinks.classList.toggle("active"); // Toggle active class for main navigation visibility
+            mobileNav.classList.toggle("hidden"); // Toggle hidden class for mobile navigation visibility
+        });
+    </script>
+</body>
+</html>

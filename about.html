@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skillplot | About</title>
+    <link rel="stylesheet" href="endstyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="endstyle.css">
+    <link rel="icon" type="image/x-icon" href="skillpod-favicon-color.png">
+
+
+
+
+    <!-- </style> -->
+</head>
+<body>
+    <header>
+      <i class="fas fa-bars" id="toggle-icon"></i>
+      <a class="logo" href="about.html"><img src="logos.png" alt="logo"></a>
+      <nav>
+        <ul class="nav__links">
+          <!-- <li><a href="#">Articles</a></li>
+          <li><a href="#">Community</a></li> -->
+          <li><a href="about.html">About</a></li>
+          <li><a href="help.html">Help</a></li>
+          <li><a class="cta" href="trysignup.html">SignUp</a></li>
+          <li><a class="cta" href="trylogin.html">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+    <nav class="mobile-nav hidden">
+      <ul class="nav__linksM">
+          <!-- <li><a href="searchbar1.html">Jobs</a></li>
+          <li><a href="trycomm.html">Community</a></li> -->
+          <li><a href="about.html">About</a></li>
+          <li><a href="help.html">Help</a></li>
+          <li><a href="trysignup.html">SignUp</a></li>
+          <li><a href="trylogin.html">Login</a></li>
+      </ul>
+  </nav>
+  
+    <main class="about">
+      <div class="container">
+        <h2>About SkillPlot</h2>
+        <p>SkillPlot is a leading online platform dedicated to connecting talented individuals with exciting job opportunities. We empower both employers and job seekers by providing a user-friendly and efficient platform that streamlines the recruitment process.</p>
+        <br>
+        <div class="about-sections">
+          
+          <div class="about-section">
+            <h3>For Job Seekers</h3>
+            <ul>
+              <li>Discover a diverse range of job opportunities.</li>
+              <li>Showcase your skills and experience to potential employers.</li>
+              <li>Land your dream job with SkillPlot's intuitive platform.</li>
+            </ul>
+          </div>
+        </div>
+        <br>
+        <br>
+  
+        <p>Our commitment to innovation and user experience makes SkillPlot the preferred platform for both employers and job seekers seeking a seamless and successful recruitment journey.</p>
+      </div>
+    </main>
+  
+    <footer>
+      <hr>
+      <div class="endata">
+        <span>
+          <a class="logo" href="/"><img src="skillpod-favicon-color.png" alt="logo"></a>
+        </span>
+        <span class="desc">
+          <br>
+          Your Gateway to Career Success! SkillPod is a dynamic job board platform designed to connect talented individuals with exciting employment opportunities tailored to their skills and aspirations. Whether you're a seasoned professional or just starting your career journey, SkillPod empowers you to explore a vast array of job listings across various industries and geographic locations. With user-friendly features and intuitive search functionalities, finding the perfect job has never been easier. Join SkillPlot today and unlock your potential for professional growth and fulfillment!
+        </span>
+    </div>
+    <div class="share-btn-container">
+        <a href="#" target="_blank" class="facebook-btn">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="#" target="_blank" class="twitter-btn">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <!-- <a href="#" target="_blank" class="pinterest-btn">
+          <i class="fab fa-pinterest"></i>
+        </a> -->
+        <a href="#" target="_blank" class="linkedin-btn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="#" target="_blank" class="whatsapp-btn">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="#" target="_blank" class="instagram-btn">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" target="_blank" class="snapchat-btn">
+          <i class="fab fa-snapchat"></i>
+        </a>
+      </div>
+    <script>
+        const pinterestImg = document.querySelector(".pinterest-img");
+        const facebookBtn = document.querySelector(".facebook-btn");
+        const twitterBtn = document.querySelector(".twitter-btn");
+        const pinterestBtn = document.querySelector(".pinterest-btn");
+        const linkedinBtn = document.querySelector(".linkedin-btn");
+        const whatsappBtn = document.querySelector(".whatsapp-btn");
+        const instagramBtn = document.querySelector(".instagram-btn");
+        const snapchatBtn = document.querySelector(".snapchat-btn");
+        function init() {
+          let postUrl = encodeURI(document.location.href);
+          let postTitle = encodeURI("Hi everyone, please check this out: ");
+          let postImg = encodeURI(pinterestImg.src);
+          facebookBtn.setAttribute(
+            "href",
+            `https://www.facebook.com/sharer.php?u=${postUrl}`
+          );
+          twitterBtn.setAttribute(
+            "href",
+            `https://twitter.com/share?url=${postUrl}&text=${postTitle}`
+          );
+          pinterestBtn.setAttribute(
+            "href",
+            `https://pinterest.com/pin/create/bookmarklet/?media=${postImg}&url=${postUrl}&description=${postTitle}`
+          );
+          linkedinBtn.setAttribute(
+            "href",
+            `https://www.linkedin.com/shareArticle?url=${postUrl}&title=${postTitle}`
+          );
+          whatsappBtn.setAttribute(
+            "href",
+            `https://wa.me/?text=${postTitle} ${postUrl}`
+          );
+          instagramBtn.setAttribute(
+            "href",
+            `https://www.instagram.com/?utm_source=ig_web_copy_link`
+          );
+          snapchatBtn.setAttribute(
+            "href",
+            `https://www.snapchat.com/add/USERNAME`
+          );
+        }
+        init();
+      </script>
+      <center><a class="devang" href="#">Designed By<br>Devang Sethi</a></center>
+    </footer>
+    <script>
+      const toggleIcon = document.getElementById("toggle-icon");
+      const navLinks = document.querySelector(".nav__links");
+      const mobileNav = document.querySelector(".mobile-nav");
+
+      toggleIcon.addEventListener("click", () => {
+          navLinks.classList.toggle("active"); // Toggle active class for main navigation visibility
+          mobileNav.classList.toggle("hidden"); // Toggle hidden class for mobile navigation visibility
+      });
+  </script>
+</body>
+</body>
+</html>

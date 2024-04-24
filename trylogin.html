@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skillplot | Login</title>
+    <link rel="stylesheet" href="tryloginstyle.css">
+    <link rel="icon" type="image/x-icon" href="skillpod-favicon-color.png">
+    <style>
+        @media (max-width: 768px) {
+
+.container {
+    width: 80%;
+}
+
+.form-container {
+    flex-direction: column;
+}
+
+.form-container form {
+    width: 100%;
+}
+}
+.toggle-container {
+display: flex;
+justify-content: space-between;
+margin-bottom: 20px;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="toggle-container">
+            <!-- <button class="toggle active" id="login-toggle">Login</button> -->
+
+            <!-- <button class="toggle" id="signup-toggle">Sign Up</button> -->
+        </div>
+
+        <div class="form-container">
+            <form id="login-form" class="active">
+                <h1>Login</h1>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+
+        </div>
+    </div>
+
+    <script>
+       const DUMMY_USERNAME = "qwerty";
+        const DUMMY_PASSWORD = "12";
+
+        const storedUserData = localStorage.getItem("userData");
+        const storedUsername = storedUserData ? JSON.parse(storedUserData).name : null;
+        const storedPassword = storedUserData ? JSON.parse(storedUserData).password : null;
+
+        const loginForm = document.getElementById("login-form");
+        loginForm.addEventListener("submit", function(event) {
+          event.preventDefault(); 
+
+          const username = document.getElementById("username").value;
+          const password = document.getElementById("password").value;
+          if (username === DUMMY_USERNAME && password === DUMMY_PASSWORD) {
+            window.location.href = "trycomm.html";
+            return; 
+          }
+
+          if (username === storedUsername && password === storedPassword) {
+    
+            window.location.href = "trycomm.html";
+          } else {
+            alert("Invalid username or password.");
+          }
+        });
+
+    </script>
+</body>
+</html>

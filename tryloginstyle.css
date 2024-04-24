@@ -1,0 +1,122 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #222222;
+    width: 100%;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.toggle {
+    /* background-color: #222222;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease; */
+    margin-left: 0px;
+     padding: 9px 25px;
+     background-color: #222222;
+     border: none;
+     border-radius: 50px;
+     cursor: pointer;
+     transition: all 0.3s ease 0s;
+     color: #ffffff;
+}
+.toggle:hover{
+    background-color: #ffffff;
+    color: #222222;
+}
+
+.toggle.active {
+    /* background-color: #f0f0f0;
+    color: #222222;
+     */
+     margin-left: 0px;
+     padding: 9px 25px;
+     background-color: #222222;
+     border: none;
+     border-radius: 50px;
+     cursor: pointer;
+     transition: all 0.3s ease 0s;
+}
+.toggle.active:hover{
+    background-color: #ffffff;
+    color: #222222;
+}
+
+.form-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-container form {
+    display: none;
+    width: 45%;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.form-container form.active {
+    display: block;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    /* width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px; */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    background-color: #222222;
+    border-bottom: 1px solid white;
+    color: #ffffff;
+    outline: none;
+    border-radius: 50px;
+}
+
+.form-container form button {
+    background-color: #222222;
+    padding: 10px;
+    border: none;
+    /* background-color: transparent; */
+    /* background-color: white;
+    color: skyblue; */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: #ffffff;
+   
+}
+.form-container form button:hover{
+    background-color: transparent;
+    color: #222222;
+}
